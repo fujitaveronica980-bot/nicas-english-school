@@ -532,11 +532,11 @@ h1, h2, h3 {
 
 .about-photo img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: top;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+  filter: drop-shadow(0 12px 20px rgba(120, 80, 40, 0.18));
 }
 
 .about-lead p {
