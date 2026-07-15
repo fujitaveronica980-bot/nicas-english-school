@@ -190,6 +190,31 @@ h1, h2, h3 {
   z-index: 1;
 }
 
+.hero-floral {
+  position: absolute;
+  width: 130px;
+  height: auto;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.hero-floral-tl {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.hero-floral-br {
+  bottom: 0.5rem;
+  right: 0.5rem;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 640px) {
+  .hero-floral {
+    width: 80px;
+  }
+}
+
 .hero-kicker {
   display: inline-block;
   padding: 0.45rem 1.2rem;
@@ -285,6 +310,13 @@ h1, h2, h3 {
   margin-bottom: 2.6rem;
 }
 
+.section-floral {
+  display: block;
+  width: 220px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
 .section-kicker {
   color: var(--accent);
   font-weight: 800;
@@ -323,9 +355,24 @@ h1, h2, h3 {
 }
 
 .strength-icon {
-  font-size: 1.9rem;
-  display: inline-block;
-  margin-bottom: 0.8rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 12px;
+  margin-bottom: 0.9rem;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.strength-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.strength-icon-teal {
+  background: var(--teal-soft);
+  color: var(--teal);
 }
 
 .strength h3 {
@@ -378,8 +425,19 @@ h1, h2, h3 {
 }
 
 .card-icon {
-  font-size: 2rem;
-  margin-bottom: 0.9rem;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.card-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .card h3 {
@@ -624,6 +682,46 @@ a.contact-item:hover {
   height: 1.15rem;
   width: auto;
   opacity: 0.85;
+}
+
+/* ---------- Floating trial-lesson CTA ---------- */
+
+.floating-cta {
+  position: fixed;
+  right: 1.4rem;
+  bottom: 1.4rem;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.85rem;
+  line-height: 1.25;
+  box-shadow: 0 10px 26px rgba(217, 95, 53, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.floating-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(217, 95, 53, 0.45);
+}
+
+.floating-cta-icon {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .floating-cta {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.7rem 0.95rem;
+    font-size: 0.78rem;
+  }
 }
 
 /* ---------- Reveal animation ---------- */
