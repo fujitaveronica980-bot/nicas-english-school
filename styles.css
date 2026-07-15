@@ -525,9 +525,18 @@ h1, h2, h3 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 0.85fr 1.3fr 1fr;
   gap: 2.5rem;
   align-items: center;
+}
+
+.about-photo img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .about-lead p {
@@ -759,6 +768,10 @@ a.contact-item:hover {
   .contact-box {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .about-photo img {
+    max-width: 280px;
+    margin-inline: auto;
   }
 }
 
