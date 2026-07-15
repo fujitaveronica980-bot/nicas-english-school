@@ -609,6 +609,18 @@ a.contact-item:hover {
   font-size: 0.88rem;
 }
 
+.footer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.footer-tag-mark {
+  height: 1.15rem;
+  width: auto;
+  opacity: 0.85;
+}
+
 /* ---------- Reveal animation ---------- */
 
 .reveal {
